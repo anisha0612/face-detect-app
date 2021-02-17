@@ -89,11 +89,15 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
     axios
-      .post("http://localhost:3500/imageurl", { input: this.state.input })
+      .post("https://arcane-coast-96493.herokuapp.com/imageurl", {
+        input: this.state.input,
+      })
       .then((response) => {
         if (response) {
           axios
-            .put("http://localhost:3500/image", { id: this.state.user.id })
+            .put("https://arcane-coast-96493.herokuapp.com/image", {
+              id: this.state.user.id,
+            })
             .then((response) => response)
             .then((count) => {
               Object.assign(this.state.user, { entries: count });
