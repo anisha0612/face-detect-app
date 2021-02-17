@@ -55,6 +55,9 @@ class Register extends Component {
                     type='name'
                     name='name'
                     id='name'
+                    required
+                    minlength='3'
+                    maxlength='100'
                     onChange={this.onNameChange}
                   />
                 </div>
@@ -67,6 +70,7 @@ class Register extends Component {
                     type='email'
                     name='email-address'
                     id='email-address'
+                    required
                     onChange={this.onEmailChange}
                   />
                 </div>
@@ -79,6 +83,8 @@ class Register extends Component {
                     type='password'
                     name='password'
                     id='password'
+                    pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}'
+                    title='Please include at least 1 uppercase, 1 lowercase and 1 number and minimum 8 characters long'
                     onChange={this.onPasswordChange}
                   />
                 </div>
