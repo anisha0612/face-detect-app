@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Face Recognition Component  creating a snapshot of the face recognition component 1`] = `
+<div
+  className="center ma"
+>
+  <div
+    className="absolute"
+  >
+    <img
+      alt="pic"
+      className="mt3"
+      height="auto"
+      id="image"
+      width="500px"
+    />
+    <div
+      className="flex absolute flex-wrap center pointer shadow-2 ba bw2 b--light-blue "
+      style={
+        Object {
+          "bottom": 45,
+          "left": 59,
+          "right": 34,
+          "top": 23,
+        }
+      }
+    />
+    <div
+      className="flex absolute flex-wrap center pointer shadow-2 ba bw2 b--light-blue "
+      style={
+        Object {
+          "bottom": 75,
+          "left": 49,
+          "right": 24,
+          "top": 40,
+        }
+      }
+    />
+  </div>
+</div>
+`;
