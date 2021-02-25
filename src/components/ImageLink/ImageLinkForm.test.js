@@ -1,5 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
+import { create } from "react-test-renderer";
 import ImageLinkForm from "./ImageLinkForm";
 
 describe("ImageLink Form Component", () => {
@@ -18,5 +19,18 @@ describe("ImageLink Form Component", () => {
 
     wrapper.find("input").simulate("change", event.target.value);
     expect(mockOnInputChange).toBeCalledWith("image.jpg");
+  });
+
+  //   Snapshot Testing of Image Link Component
+  it("expect Image Link component is rendered", () => {
+    const mockOnInputChange = jest.fn();
+    const mockButtonSubmit = jest.fn();
+    const wrapper = create(
+      <ImageLinkForm
+        onInputChange={mockOnInputChange}
+        onButtonSubmit={mockButtonSubmit}
+      />
+    ).toJSON();
+    expect(wrapper).toMatchSnapshot();
   });
 });

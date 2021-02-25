@@ -12,6 +12,7 @@ exports[`Face Recognition Component  creating a snapshot of the face recognition
       className="mt3"
       height="auto"
       id="image"
+      src="http://image.jpg"
       width="500px"
     />
     <div
